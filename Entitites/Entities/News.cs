@@ -35,6 +35,9 @@ namespace Entitites.Entities
         [Column("NTC_REGISTER")]
         public DateTime RegisterData { get; set; }
 
+
+        public DateTime UpdateData { get; set; }
+
         //EF RELATIONS
 
 
