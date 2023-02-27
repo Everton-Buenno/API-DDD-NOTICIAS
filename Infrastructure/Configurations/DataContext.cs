@@ -23,17 +23,6 @@ namespace Infrastructure.Configurations
 
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(GetStringConnection());
-                base.OnConfiguring(optionsBuilder);
-            }
-        }
-
-
-
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -42,13 +31,7 @@ namespace Infrastructure.Configurations
         }
 
 
-
-        public static string GetStringConnection()
-        {
-            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=DDD-Api-News;Trusted_Connection=True;MultipleActiveResultSets=true";
-
-            return connectionString;
-        }
+     
 
     }
 }

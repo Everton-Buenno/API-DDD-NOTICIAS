@@ -2,6 +2,8 @@
 using Entitites.Entities;
 using Infrastructure.Configurations;
 using Infrastructure.Repository.Generics;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repository
 {
@@ -29,6 +31,24 @@ namespace Infrastructure.Repository
                 });
 
                 await _context.SaveChangesAsync();
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+
+            return true;
+        }
+
+        public async Task<bool> ExistsUser(string email, string password)
+        {
+            try
+            {
+                return await _context.ApplicationUsers.Where(u => u.Email.Equals(email) && u.PasswordHash.Equals(password)).AsNoTracking().AnyAsync();
+
+
 
             }
             catch (Exception)
