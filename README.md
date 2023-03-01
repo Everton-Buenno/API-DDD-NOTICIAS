@@ -22,7 +22,6 @@ O objetivo deste projeto é fornecer uma estrutura sólida para o desenvolviment
 
 - ASP.NET 6
 - Entity Framework Core
-- AutoMapper
 - Swagger
 - JWT Authentication
 - SQL Server
