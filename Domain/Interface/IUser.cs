@@ -14,5 +14,7 @@ namespace Domain.Interface
         Task<bool> ExistsUser(string email, string password);
 
 
+        Task<string> ReturnUserId(string email);
+
     }
 }

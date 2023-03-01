@@ -26,7 +26,12 @@ namespace Application.Applications
 
         public async Task<bool> ExistsUser(string email, string password)
         {
-            return  await _user.ExistsUser(email, password);
+            return await _user.ExistsUser(email, password);
+        }
+
+        public async Task<string> ReturnUserId(string email)
+        {
+            return await _user.ReturnUserId(email);
         }
     }
 }

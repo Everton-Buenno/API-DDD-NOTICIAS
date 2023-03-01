@@ -10,5 +10,8 @@ namespace Application.Interfaces
     {
         Task<bool> AddUser(string email, string password, int age, string cell);
         Task<bool> ExistsUser(string email, string password);
+
+
+        Task<string> ReturnUserId(string email);
     }
 }

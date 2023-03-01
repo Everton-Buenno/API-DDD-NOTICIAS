@@ -59,5 +59,23 @@ namespace Infrastructure.Repository
 
             return true;
         }
+
+        public async Task<string> ReturnUserId(string email)
+        {
+            try
+            {
+                var user = await _context.ApplicationUsers.Where(e => e.Email.Equals(email)).AsNoTracking().FirstOrDefaultAsync();
+                if(user == null) { return ("Usuario Não Encontrado"); }    
+
+
+                return user.Id;
+
+            }
+            catch (Exception)
+            {
+                return string.Empty;
+            }
+
+        }
     }
 }
