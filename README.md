@@ -34,7 +34,7 @@ O projeto foi organizado seguindo a arquitetura DDD, com a seguinte estrutura de
 - **Application**: contém as interfaces e implementações dos serviços da aplicação;
 - **Domain**: contém as classes de domínio da aplicação, incluindo entidades, objetos de valor e serviços de domínio;
 - **Infrastructure**: responsável por prover as implementações concretas dos serviços definidos na camada de Application, incluindo os repositórios e a infraestrutura de acesso a dados;
-- **Presentation**: responsável por prover as funcionalidades de apresentação da aplicação, incluindo a configuração do Swagger e da autenticação JWT.
+
 
 ## Contribuindo
 
